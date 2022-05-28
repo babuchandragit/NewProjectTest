@@ -1,0 +1,90 @@
+﻿
+@model IEnumerable<NewProjectTest.Models.Item>
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">CO Conversions 2022 Schedule</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-controller="Item" asp-action="Create" class="btn-primary">Create New Item </a>
+        </div>
+    </div>
+    <br />
+    @if (Model.Count() > 0)
+    {
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Office
+                    </th>
+                    <th>
+                        State
+                    </th>
+                    <th>
+                        CutDate
+                    </th>
+                    <th>
+                        Switch1
+                    </th>
+                    <th>
+                        Switch2
+                    </th>
+                    <th>
+                        HostClli
+                    </th>
+                    <th>
+                        OldClli
+                    </th>
+                    <th>
+                        NewClli
+                    </th>
+                    <th>
+                        ProjectManager
+                    </th>
+                    <th>
+                        LCSManager
+                    </th>
+                    <th>
+                        DTRManager
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+
+                <tr>
+                    <td width="25%">@item.Id</td>
+                    <td width="25%">@item.Office</td>
+                    <td width="30%">@item.State</td>
+                    <td width="30%">@item.CutDate</td>
+                    <td width="35%">@item.Switch1</td>
+                    <td width="35%">@item.Switch2</td>
+                    <td width="30%">@item.HostClli</td>
+                    <td width="30%">@item.OldClli</td>
+                    <td width="30%">@item.NewClli</td>
+                    <td width="30%">@item.ProjectManager</td>
+                    <td width="30%">@item.LCSManager</td>
+                    <td width="30%">@item.DTRManager</td>
+                    <td width="30">
+                        <div class="w-100 btn-group" role="group">
+                            <a asp-controller="item" asp-action="Update" asp-route-Id="@item.Id" class="btn btn-primary mx-1">Update</a>
+                            <a asp-controller="item" asp-action="Delete" asp-route-Id="@item.Id" class="btn btn-danger mx-1">Delete</a>
+                        </div>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No Items Created</p>
+    }
+</div>
+

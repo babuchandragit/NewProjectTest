@@ -1,0 +1,102 @@
+﻿
+@model NewProjectTest.Models.Item
+
+<form method="post" asp-action="DeletePost">
+    <div class="border p-3">
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Delete Item</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+                    <div class="col-4">
+                        <div class="col-4">
+                            <input asp-for="Id" class="form-control" />
+                        </div>
+                        <label asp-for="Office"></label>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="State"></label>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="CutDate"></label>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="Switch1"></label>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="Switch2"></label>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="HostClli"></label>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="OldClli"></label>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="NewClli"></label>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="ProjectManager"></label>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="LCSManager"></label>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="DTRManager"></label>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <input asp-for="Id" class="form-control" />
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="Office" class="form-control" />
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="State" class="form-control" />
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="CutDate" class="form-control" />
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="Switch1" class="form-control" />
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="Switch2" class="form-control" />
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="HostClli" class="form-control" />
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="OldClli" class="form-control" />
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="NewClli" class="form-control" />
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="ProjectManager" class="form-control" />
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="LCSManager" class="form-control" />
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="DTRManager" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-8 offset-2 row">
+                        <div class="col">
+                            <input type="submit" class="btn btn-info w-75" value="Delete" />
+                        </div>
+                        <div class="col">
+                            <a asp-action="Index" class="btn btn-danger w-75">Back</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
